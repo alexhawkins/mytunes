@@ -6,11 +6,14 @@ var SongModel = Backbone.Model.extend({
     this.trigger('play', this);
   },
   enqueue: function(){
+    // add song to our queue
     this.trigger('enqueue', this);
   },
+    // remove song from our queue
   dequeue: function(){
      this.trigger('dequeue', this);
   },
+    // let our app know that the song is over
   ended: function(){
     this.trigger('ended', this);
   }
