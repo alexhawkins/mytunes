@@ -25,6 +25,11 @@ var SongQueue = Songs.extend({
       if (this.length > 0) {
         this.playFirst();
       }
+      
+       if(this.length === 0){
+        $('audio')[0].pause();
+        $('audio')[0].currentTime = 0;
+      }
     });
 
     this.on('dequeue', function(song) {
