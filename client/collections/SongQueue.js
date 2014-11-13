@@ -11,10 +11,14 @@ var SongQueue = Songs.extend({
       }
     });
 
-    this.on('ended', function() {
+    this.on('ended', function(song) {
       //remove the song from our playlist/queue
+      
+      //console.log(this);
       this.shift();
       //this.remove(song);
+      //console.log(this);
+      //
       //console.log(this.at(0))
       //console.log(this.length);
       //check to see there are still songs left to play
