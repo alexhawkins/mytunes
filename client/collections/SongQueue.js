@@ -9,23 +9,24 @@ var SongQueue = Songs.extend({
       if (this.length === 1) { //make sure there is only one song in our queue.
         this.playFirst();
       }
-    }, this);
+    });
 
-    this.on('ended', function(song) {
+    this.on('ended', function() {
       //remove the song from our playlist/queue
-      this.remove(song);
+      this.shift();
+      //this.remove(song);
       //console.log(this.at(0))
       //console.log(this.length);
       //check to see there are still songs left to play
       if (this.length > 0) {
         this.playFirst();
       }
-    }, this);
+    });
 
     this.on('dequeue', function(song) {
       //console.log(song);
       this.remove(song);
-    }, this);
+    });
   },
 
   playFirst: function() {
