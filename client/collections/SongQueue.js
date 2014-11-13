@@ -30,6 +30,10 @@ var SongQueue = Songs.extend({
     this.on('dequeue', function(song) {
       //console.log(song);
       this.remove(song);
+      if(this.length === 0){
+        $('audio')[0].pause();
+        $('audio')[0].currentTime = 0;
+      }
     });
   },
 
