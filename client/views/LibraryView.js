@@ -3,7 +3,11 @@ var LibraryView = Backbone.View.extend({
 
   tagName: "table",
 
-  template: _.template('<th><strong>Library</strong></th>'),
+  id: 'library-view',
+
+  className: 'library-view',
+
+  template: _.template('<tr><td><strong>Tunes</strong></td><td></td><td></td><td></td><td></td><td>Plays</td>'),
 
 
   initialize: function() {
