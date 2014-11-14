@@ -1,0 +1,12 @@
+.artist {
+  font-style: italic;
+}
+
+.title {
+  font-weight: bold;
+}
+
+audio {
+  margin-top: 20px;
+  width: 100%;
+}
