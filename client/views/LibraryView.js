@@ -5,10 +5,10 @@ var LibraryView = Backbone.View.extend({
 
   id: 'library-view',
 
-  className: 'library-view',
+  className: 'table table-striped',
 
-  template: _.template('<tr><td><strong>Tunes</strong></td><td></td><td></td><td></td><td></td><td>Plays</td>'),
-
+  //template: _.template('<tr><td><strong>Tunes</strong></td><td></td><td></td><td></td><td></td><td>Plays</td>'),
+  template: _.template('<thead><th>Artist</th><th>Title</th><th></th><th>Count</th><th></th><th></th><th><th></th></th><th>Votes</th></tr></thead>'),
 
   initialize: function() {
     this.render();
